@@ -11,6 +11,6 @@ const router = express.Router();
 
 router.post("/", validation(joiSchema), controllerWrapper(ctrl.add));
 
-router.get("/", authenticate, ctrl.getAll);
+router.get("/", ctrl.getAll);
 
 module.exports = router;
